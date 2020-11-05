@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "HOST=127.0.0.1 vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.18.1",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
@@ -26,5 +29,6 @@
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^1.19.1",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "proxy": "http://localhost:4000"
 }
