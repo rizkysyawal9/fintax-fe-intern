@@ -5,8 +5,13 @@
         <DataCard :datum="datum" />
       </b-col>
     </b-row>
-    <b-row>
+    <b-row v-if="loading == false">
       <b-col cols="12" lg="6" v-for="recruit in recruits" :key="recruit.id">
+        <RecruitCard :recruit="recruit" class="mb-4" :loading="loading" />
+      </b-col>
+    </b-row>
+    <b-row v-else-if="loading == true">
+      <b-col cols="12" lg="6" v-for="(n, index) in 10" :key="index">
         <RecruitCard :recruit="recruit" class="mb-4" :loading="loading" />
       </b-col>
     </b-row>
@@ -32,7 +37,7 @@ export default {
   data() {
     return {
       loading: true,
-      recruits: [],
+      numberOfRecruits: 10,
       currentPage: "",
       rows: "",
       perPage: "",
