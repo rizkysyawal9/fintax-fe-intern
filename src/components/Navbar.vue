@@ -22,7 +22,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    if (this.$route.name === "About") {
+      this.styleObject = {
+        position: "fixed",
+        width: "100%"
+      };
+    } else {
+      this.styleObject = {
+        position: "relative"
+      };
+    }
+  },
+  data() {
+    return {
+      styleObject: {}
+    };
+  }
+};
 </script>
 
 <style scoped>

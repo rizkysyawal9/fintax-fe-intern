@@ -4,6 +4,10 @@
       <b-col cols="12" lg="3" v-for="datum in data" :key="datum.id">
         <DataCard :datum="datum" />
       </b-col>
+      <b-button @click="showPerPage(3)">3</b-button>
+      <b-button @click="showPerPage(5)">5</b-button>
+      <b-button @click="showPerPage(10)">10</b-button>
+      <b-button @click="showPerPage(12)">All</b-button>
     </b-row>
     <b-table
       striped
@@ -49,6 +53,11 @@ export default {
       if (this.recruits.length != null) {
         return this.recruits.length;
       } else return 1;
+    }
+  },
+  methods: {
+    showPerPage(number) {
+      this.perPage = number;
     }
   },
   data() {
