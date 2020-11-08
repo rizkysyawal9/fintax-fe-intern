@@ -1,40 +1,30 @@
 <template>
   <div class="center">
-    <b-row align-v="center" class="vh-100 center">
-      <b-col cols="12" lg="6" class="mb-4">
+    <b-row align-v="center" class="content">
+      <b-col cols="12" lg="6">
         <img
           src="../assets/profile.jpg"
           alt=""
-          width="250px"
+          width="200px"
           style="border-radius: 50%"
+          class="mb-4"
         />
+        <div>
+          <h4>
+            Made By Rizky Syawal
+          </h4>
+          <p>Computer Science Student at IPB University</p>
+        </div>
       </b-col>
-      <b-col cols="12" lg="6" class="mb-4">
-        <h2 class="mb-4">Project Interview Internship Fintax</h2>
+      <b-col cols="12" lg="6">
+        <h2 class="mb-4 mt-0 title">
+          Project Interview Internship Fintax
+        </h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et aliquam
-          accusantium necessitatibus soluta ab quas, sint nobis enim culpa
-          dolorum! Asperiores tempore, hic quam libero magni perspiciatis ipsa
-          incidunt laboriosam.
+          Project ini merupakan project untuk interview internship frontend
+          engineer fintax. Tema project ini adalah sistem informasi HR
+          Recruitment untuk melihat calon-calon recruit
         </p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 32 32"
-          width="32"
-          height="32"
-          focusable="false"
-          role="img"
-          class="navbar-nav-svg"
-          data-v-5a6ee65f=""
-        >
-          <title data-v-5a6ee65f="">Twitter</title>
-          <g fill="currentColor" data-v-5a6ee65f="">
-            <path
-              d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3 c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,10.8,5.5,8.2,2.2,4.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5 c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1C2.9,27.9,6.4,29,10.1,29c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C30,8.5,31.1,7.4,32,6.1z"
-              data-v-5a6ee65f=""
-            ></path>
-          </g>
-        </svg>
       </b-col>
     </b-row>
   </div>
@@ -45,9 +35,19 @@ export default {};
 </script>
 
 <style scoped>
-.center {
+/* .center {
   margin-top: -80px;
+} */
+
+.content {
+  min-height: calc(100vh - 220px);
 }
+
+.title {
+  color: #3179c6;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 720px) {
   .center {
     margin-top: 0px;

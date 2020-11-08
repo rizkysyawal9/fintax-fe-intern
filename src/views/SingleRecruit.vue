@@ -12,7 +12,7 @@
         <div v-else-if="loading == true" class="mb-3">
           <SkeletonBox width="125px" height="125px" />
         </div>
-        <div>
+        <div class="mb-3">
           <h2 style="font-weight: bold" v-if="loading == false">
             {{ recruit.first_name }} {{ recruit.last_name }}
           </h2>
@@ -34,6 +34,8 @@
           </div>
           <SkeletonBox width="190px" height="20px" v-if="loading == true" />
         </div>
+        <b-button class="mx-1" variant="success">Hire</b-button>
+        <b-button class="mx-1" variant="danger">Reject</b-button>
       </b-col>
       <b-col cols="12" lg="8" style="text-align:start">
         <b-card>

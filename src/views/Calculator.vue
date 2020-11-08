@@ -30,7 +30,7 @@
       </b-card>
     </b-col>
     <b-col cols="12" lg="6">
-      <h3 class="my-3">Riwayat Perhitungan</h3>
+      <h3 class="my-3">Count History</h3>
       <b-table
         id="count"
         striped
@@ -199,5 +199,16 @@ export default {
 .actions:hover {
   background: rgba(248, 148, 6, 1);
   cursor: pointer;
+}
+
+.btn {
+  background-color: #3179c6;
+  border-color: #3179c6;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: #00a9e9;
+  border-color: #00a9e9;
 }
 </style>

@@ -15,9 +15,14 @@
         </b-row>
       </b-container>
     </div>
-    <b-container>
+    <b-container class="content">
       <router-view />
     </b-container>
+    <footer class="footer">
+      <div class="flex-item">
+        2020 - Made with Vue.js
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -82,3 +87,24 @@ export default {
   }
 };
 </script>
+<style scoped>
+.content {
+  min-height: calc(100vh - 140px);
+}
+
+.footer {
+  text-align: center;
+  vertical-align: center;
+  height: 50px;
+  background-color: #3179c6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item {
+  flex-basis: 1;
+  color: white;
+  font-weight: bold;
+}
+</style>

@@ -4,10 +4,12 @@
       <b-col cols="12" lg="3" v-for="datum in data" :key="datum.id">
         <DataCard :datum="datum" />
       </b-col>
-      <b-button @click="showPerPage(3)">3</b-button>
-      <b-button @click="showPerPage(5)">5</b-button>
-      <b-button @click="showPerPage(10)">10</b-button>
-      <b-button @click="showPerPage(12)">All</b-button>
+      <b-dropdown text="Filter Show By" variant="primary" class="pl-3 mb-4">
+        <b-dropdown-item @click="showPerPage(3)">Show 3</b-dropdown-item>
+        <b-dropdown-item @click="showPerPage(5)">Show 5</b-dropdown-item>
+        <b-dropdown-item @click="showPerPage(10)">Show 10</b-dropdown-item>
+        <b-dropdown-item @click="showPerPage(12)">Show All</b-dropdown-item>
+      </b-dropdown>
     </b-row>
     <b-table
       striped
@@ -116,4 +118,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.btn {
+  background-color: #3179c6;
+  border-color: #3179c6;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: #00a9e9;
+  border-color: #00a9e9;
+}
+</style>

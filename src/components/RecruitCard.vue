@@ -68,4 +68,15 @@ export default {
 .card > body {
   padding: 0px;
 }
+
+.btn {
+  background-color: #3179c6;
+  border-color: #3179c6;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: #00a9e9;
+  border-color: #00a9e9;
+}
 </style>
