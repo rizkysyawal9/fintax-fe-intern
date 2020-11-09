@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import SkeletonBox from "./SkeletonBox";
 export default {
   components: {
@@ -37,11 +36,7 @@ export default {
     recruit: Object,
     loading: Boolean
   },
-  created: function() {
-    axios.get("https://reqres.in/api/users/1").then(response => {
-      console.log(response);
-    });
-  },
+
   data() {
     return {
       id: 7,

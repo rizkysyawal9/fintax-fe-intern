@@ -5,6 +5,11 @@
         <DataCard :datum="datum" />
       </b-col>
     </b-row>
+    <b-row class="ml-0 mb-4">
+      <b-button class="mr-3" @click="showNewPage(3)">Show 3</b-button>
+      <b-button class="mr-3" @click="showNewPage(6)">Show 6</b-button>
+      <b-button class="mr-3" @click="showNewPage(12)">Show 12</b-button>
+    </b-row>
     <b-row v-if="loading == false">
       <b-col cols="12" lg="6" v-for="recruit in recruits" :key="recruit.id">
         <RecruitCard :recruit="recruit" class="mb-4" :loading="loading" />
@@ -27,12 +32,24 @@ export default {
     DataCard,
     RecruitCard
   },
+  methods: {
+    showNewPage(number) {
+      this.$router.push({ name: "Cards", query: { perPage: number } });
+    }
+  },
   created: function() {
-    axios.get("https://reqres.in/api/users?per_page=18").then(response => {
-      this.recruits = response.data.data;
-      console.log(this.recruits);
-      this.loading = false;
-    });
+    let pages = {};
+    pages.perPage =
+      this.$route.query.perPage != undefined ? this.$route.query.perPage : 12;
+    console.log("this is the number of pages");
+    console.log(pages.perPage);
+    axios
+      .get(`https://reqres.in/api/users?per_page=${pages.perPage}`)
+      .then(response => {
+        this.recruits = response.data.data;
+        console.log(this.recruits);
+        this.loading = false;
+      });
   },
   data() {
     return {
@@ -41,6 +58,8 @@ export default {
       currentPage: "",
       rows: "",
       perPage: "",
+      recruits: {},
+      recruit: {},
       data: [
         {
           id: 1,
@@ -72,4 +91,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.btn {
+  background-color: #3179c6;
+  border-color: #3179c6;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: #00a9e9;
+  border-color: #00a9e9;
+}
+</style>

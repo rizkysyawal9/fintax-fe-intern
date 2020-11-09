@@ -85,7 +85,7 @@ export default {
       ],
       perPage: 6,
       total: 1,
-      currentPage: 0,
+      currentPage: 1,
       recruits: [],
       data: [
         {

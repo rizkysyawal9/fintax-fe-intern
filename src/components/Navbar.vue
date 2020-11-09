@@ -20,6 +20,7 @@
           <b-nav-item class="mr-3" to="/calculator">
             Calculator
           </b-nav-item>
+          <b-nav-item class="mr-3" to="/secure"> Secure Route</b-nav-item>
           <b-nav-item to="/">
             About
           </b-nav-item>
@@ -52,10 +53,6 @@ export default {
 </script>
 
 <style scoped>
-#nav {
-  /* background-color: #2a9df4; */
-}
-
 #nav a {
   color: #808080;
   font-weight: bold;

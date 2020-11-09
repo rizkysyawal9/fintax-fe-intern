@@ -67,7 +67,7 @@ export default {
       operatorSign: "",
       savedNumber: [],
       fields: ["first_number", "operator", "second_number", "result", "action"],
-      currentPage: 0,
+      currentPage: 1,
       perPage: 4
     };
   },
